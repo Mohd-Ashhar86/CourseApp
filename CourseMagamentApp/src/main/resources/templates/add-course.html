@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Add Course</title></head>
+<body>
+<h2>Add Course</h2>
+<form action="/add" method="post" th:object="${course}">
+    Name: <input type="text" th:field="*{name}" /><br/>
+    Duration: <input type="text" th:field="*{duration}" /><br/>
+    Instructor: <input type="text" th:field="*{instructor}" /><br/>
+    <button type="submit">Submit</button>
+</form>
+<a href="/">Back to List</a>
+</body>
+</html>
